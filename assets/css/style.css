@@ -9,6 +9,7 @@
 		CORES TEXTO:
 						40, 40, 40
 						95, 99, 104
+						32, 33, 36
 		BUTTONS:
 			BG:			26, 115, 232
 			BG:HOVER	23, 78, 166
@@ -21,17 +22,44 @@
 				BORDAS: 2px;
 				PADDING: 3px 14px;
 */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
 	padding: 0;
 	margin: 0;
 	outline: none;
 }
+html, body {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'GlacialIndifferenceRegular', 'Roboto', sans-serif;
 	color: rgba(40, 40, 40, 1);
 }
+.sticky,
+.sticky-top,
+.sticky-right,
+.sticky-left,
+.sticky-bottom {
+	position: sticky;
+	z-index: 2;
+}
+.sticky,
+.sticky-top {
+	top:0;
+}
+.sticky-right {
+	right:0;
+}
+.sticky-left {
+	left:0;
+}
+.sticky-bottom {
+	bottom:0;
+}
 header,
 .header,
+footer,
+.footer,
 nav,
 .nav {
 	width: calc(100% - 40px);
@@ -41,12 +69,16 @@ nav,
 }
 header,
 .header,
+footer,
+.footer,
 nav,
 .nav:after {
     content: '';
     display: table;
     clear: both;
 }
+footer,
+.footer,
 main,
 .main {
 	margin-left: auto;
@@ -71,6 +103,7 @@ main,
     line-height: 56px;
 	width: fit-content;
 	display: inline-block;
+	color: rgba(95, 99, 104, 1);
 }
 .logo.logo-google span:nth-child(6n+1),
 .logo.logo-google span:nth-child(6n+4) {
@@ -162,7 +195,7 @@ input[type="text"].right-icon {
 .icon-info {
 	background-image: url('https://www.materialui.co/materialIcons/action/info_outline_grey_192x192.png');
 }
-li:not(.logo),
+ul li:not(.logo),
 button,
 button.button-1,
 .button,
@@ -184,6 +217,9 @@ input[type="reset"].button-1 {
 	cursor: pointer;
 	letter-spacing: 1.25px;
 }
+a.button.button-1 {
+	color: rgba(255, 255, 255, 1);
+}
 button:hover,
 button.button-1:hover,
 .button.button-1:hover,
@@ -195,7 +231,7 @@ input[type="button"].button-1:hover,
 input[type="reset"].button-1:hover {
 	background-color: rgba(23, 78, 166, 1);
 }
-li:not(.logo),
+ul li:not(.logo),
 button.button-2,
 .button.button-2,
 input[type="submit"].button-2,
@@ -237,7 +273,7 @@ textarea {
 input[type="file"] {
 	display: none;
 }
-ul {
+nav ul {
 	list-style-type: none;
 	padding-bottom: 1px;
 }
@@ -247,17 +283,17 @@ li.logo {
 	padding-left: 0;
 	line-height: 56px;
 }
-li.logo:hover {
+nav ul li.logo:hover {
 	color: rgba(95, 99, 104, 1);
 }
-li {
+nav ul li {
 	background-color: rgba(255, 255, 255, 1);
 	display: inline-block;
 	vertical-align: top;
 	padding: 0 20px;
 	color: rgba(95, 99, 104, 1);
 }
-li:hover {
+nav ul li:hover {
 	background-color: rgba(241, 243, 244, 1);
 	color: rgba(26, 115, 232, 1);
 }
@@ -308,30 +344,31 @@ ul.dropdown-content li:hover {
 	background-color: rgba(241, 243, 244, 1);
 }
 li.dropdown:hover > ul.dropdown-content {
+	display: block;
 	z-index:1;
 }
 li.dropdown:not([data-dropdown]):hover > ul.dropdown-content,
 li.dropdown[data-dropdown="bottom"]:hover > ul.dropdown-content {
-	display: block;
 	top: 100%;
 }
 li.dropdown[data-dropdown="top"]:hover > ul.dropdown-content {
-	display: block;
 	bottom: 100%;
 }
 li.dropdown[data-dropdown="right"]:hover > ul.dropdown-content {
-	display: block;
 	left: calc(100% + 20px);
 	top: 0;
 }
 li.dropdown[data-dropdown="left"]:hover > ul.dropdown-content {
-	display: block;
 	right: calc(100% + 20px);
 	top: 0;
 }
+.footer-buttons,
 .header-buttons {
 	display: inline-block;
 	float: right;
+}
+.footer-links {
+	display: inline-block
 }
 xmp {
 	background-color: rgba(255, 255, 200);
@@ -340,5 +377,45 @@ xmp {
 }
 a {
 	text-decoration: none;
-	color: inherit;
+	color: rgba(95, 99, 104, 1);
+}
+a:hover {
+	color: rgba(32, 33, 36, 1);
+}
+.footer-element {
+	min-width: calc(100% / 6);
+	max-width: -webkit-fill-available;
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-links,
+.footer-buttons {
+	padding: 20px 0;
+}
+.footer-element h1,
+.footer-element h2,
+.footer-element h3,
+.footer-element h4,
+.footer-element h5,
+.footer-element h6,
+.footer-element a,
+.footer-links a {
+	padding: 10px 5px;
+	margin: 5px 0;
+}
+.footer-links a {
+	margin: 0 5px;
+}
+.footer-links .logo {
+	margin-right: 50px;
+}
+.footer-element a {
+	font-size: 16px;
+	display: block;
+}
+.footer-element a:hover {
+	background-color: rgba(241, 243, 244, 1);
+}
+.footer-element a:active {
+	background-color: rgba(232, 234, 237, 1);
 }
