@@ -1,0 +1,344 @@
+/*
+	CORES:
+		FUNDOS:
+			ACTIVE:		255, 255, 255
+			ELEMENTOS:	241, 243, 244
+			HOVER:		232, 234, 237
+		BORDAS:
+						179, 206, 251
+		CORES TEXTO:
+						40, 40, 40
+						95, 99, 104
+		BUTTONS:
+			BG:			26, 115, 232
+			BG:HOVER	23, 78, 166
+			BG:DISABLED	80, 80, 80
+
+	TAMANHOS:
+		INPUT:
+			TEXTS*:
+				HEIGHT: 28px;
+				BORDAS: 2px;
+				PADDING: 3px 14px;
+*/
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+body {
+	font-family: 'GlacialIndifferenceRegular', 'Roboto', sans-serif;
+	color: rgba(40, 40, 40, 1);
+}
+header,
+.header,
+nav,
+.nav {
+	width: calc(100% - 40px);
+	height: fit-content;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1)calc(100% - 1px), rgba(218, 220, 224, 1)1px);
+	padding: 5px 20px;
+}
+header,
+.header,
+nav,
+.nav:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+main,
+.main {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1024px;
+}
+.demo-item {
+	padding: 20px;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	transition: border-color 0.15s;
+	width: calc(100% - 42px);;
+}
+.demo-item:hover {
+	border-color: rgba(179, 206, 251, 0.5);
+}
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+    line-height: 56px;
+	width: fit-content;
+	display: inline-block;
+}
+.logo.logo-google span:nth-child(6n+1),
+.logo.logo-google span:nth-child(6n+4) {
+	color: rgba(66, 133, 244, 1)
+}
+.logo.logo-google span:nth-child(6n+2),
+.logo.logo-google span:nth-child(6n+6) {
+	color: rgba(234, 67, 53, 1);
+}
+.logo.logo-google span:nth-child(6n+3) {
+	color: rgba(251, 188, 5, 1);
+}
+.logo.logo-google span:nth-child(6n+5) {
+	color: rgba(52, 168, 83, 1);
+}
+.container {
+	max-width: 1024px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+textarea,
+input:not([type]),
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"] {
+	width: 200px;
+	height: 28px;
+	background-color: rgba(241, 243, 244, 1);
+	border-style: solid;
+	border-radius: 34px;
+	border-width: 2px;
+	border-color: rgba(0, 0, 0 ,0);
+	font-size: 1em;
+	padding: 3px 12px;
+	transition: all 0.15s;
+	letter-spacing: 0.75px;
+}
+textarea:hover,
+input:not([type]):hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="text"]:hover {
+	background-color: rgba(232, 234, 237, 1);
+}
+textarea:focus,
+input:not([type]):focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus {
+	background-color: rgba(255, 255, 255, 1);
+	border-color: rgba(179, 206, 251, 1);
+}
+textarea.left-icon,
+input:not([type]).left-icon,
+input[type="email"].left-icon,
+input[type="number"].left-icon,
+input[type="password"].left-icon,
+input[type="tel"].left-icon,
+input[type="url"].left-icon,
+input[type="text"].left-icon {
+	padding-left: 32px;
+	background-size: 16px;
+	background-position: 10px;
+	background-repeat: no-repeat;
+}
+textarea.right-icon,
+input:not([type]).right-icon,
+input[type="email"].right-icon,
+input[type="number"].right-icon,
+input[type="password"].right-icon,
+input[type="tel"].right-icon,
+input[type="url"].right-icon,
+input[type="text"].right-icon {
+	padding-right: 32px;
+	background-size: 16px;
+	background-position: calc(100% - 10px);
+	background-repeat: no-repeat;
+}
+.icon-info {
+	background-image: url('https://www.materialui.co/materialIcons/action/info_outline_grey_192x192.png');
+}
+li:not(.logo),
+button,
+button.button-1,
+.button,
+input[type="submit"],
+input[type="submit"].button-1,
+input[type="button"],
+input[type="button"].button-1,
+input[type="reset"],
+input[type="reset"].button-1 {
+	display: inline-block;
+	padding: 15px 24px;
+	font-size: 14px;
+    border-radius: 2px;
+	border-width: 0px;
+	border-style: solid;
+	background-color: rgba(26, 115, 232, 1);
+	transition: background-color 0.15s;
+	color: rgba(255, 255, 255, 1);
+	cursor: pointer;
+	letter-spacing: 1.25px;
+}
+button:hover,
+button.button-1:hover,
+.button.button-1:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="submit"].button-1:hover,
+input[type="button"]:hover,
+input[type="button"].button-1:hover,
+input[type="reset"].button-1:hover {
+	background-color: rgba(23, 78, 166, 1);
+}
+li:not(.logo),
+button.button-2,
+.button.button-2,
+input[type="submit"].button-2,
+input[type="button"].button-2,
+input[type="reset"],
+input[type="reset"].button-2 {
+	background-color: rgba(241, 243, 244, 1);
+	color: rgba(26, 115, 232, 1);
+}
+li:not(.logo):hover,
+button.button-2:hover,
+.button.button-2:hover,
+input[type="submit"].button-2:hover,
+input[type="button"].button-2:hover,
+input[type="reset"]:hover,
+input[type="reset"].button-2:hover {
+	background-color: rgba(232, 234, 237, 1);
+	color: rgba(23, 78, 166, 1);
+}
+button:disabled,
+.button.disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled {
+	background-color: rgba(241, 243, 244, 1);
+	color: rgba(80, 80, 80, 1);
+	cursor: no-drop;
+}
+button:disabled:hover,
+.button.disabled:hover,
+input[type="submit"]:disabled:hover,
+input[type="button"]:disabled:hover,
+input[type="reset"]:disabled:hover {
+	background-color: rgba(232, 234, 237, 1);
+}
+textarea {
+	vertical-align: top;
+}
+input[type="file"] {
+	display: none;
+}
+ul {
+	list-style-type: none;
+	padding-bottom: 1px;
+}
+li.logo {
+	margin-right: 48px;
+	font-weight: normal;
+	padding-left: 0;
+	line-height: 56px;
+}
+li.logo:hover {
+	color: rgba(95, 99, 104, 1);
+}
+li {
+	background-color: rgba(255, 255, 255, 1);
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 20px;
+	color: rgba(95, 99, 104, 1);
+}
+li:hover {
+	background-color: rgba(241, 243, 244, 1);
+	color: rgba(26, 115, 232, 1);
+}
+li.dropdown:not([data-dropdown]),
+li.dropdown[data-dropdown="bottom"],
+li.dropdown[data-dropdown="left"],
+li.dropdown[data-dropdown="right"],
+li.dropdown[data-dropdown="top"] {
+	position: relative;
+}
+li.dropdown:not([data-dropdown]):after,
+li.dropdown[data-dropdown="bottom"]:after {
+	content: "\00a0\00a0↓";
+}
+li.dropdown:not([data-dropdown]):hover:after,
+li.dropdown[data-dropdown="bottom"]:hover:after {
+	content: "\00a0\00a0↑";
+}
+li.dropdown[data-dropdown="top"]:after {
+	content: "\00a0\00a0↑";
+}
+li.dropdown[data-dropdown="top"]:hover:after {
+	content: "\00a0\00a0↓";
+}
+li.dropdown[data-dropdown="left"]:before {
+	content: "\00a0\00a0←";
+}
+li.dropdown[data-dropdown="left"]:hover:before {
+	content: "\00a0\00a0→";
+}
+li.dropdown[data-dropdown="right"]:after {
+	content: "\00a0\00a0→";
+}
+li.dropdown[data-dropdown="right"]:hover:after {
+	content: "\00a0\00a0←";
+}
+ul.dropdown-content {
+	display: none;
+	position: absolute;
+	width: max-content;
+	background-color: rgba(255, 255, 255, 1);
+}
+ul.dropdown-content li {
+	display: block;
+    margin: 0 -20px;
+}
+ul.dropdown-content li:hover {
+	background-color: rgba(241, 243, 244, 1);
+}
+li.dropdown:hover > ul.dropdown-content {
+	z-index:1;
+}
+li.dropdown:not([data-dropdown]):hover > ul.dropdown-content,
+li.dropdown[data-dropdown="bottom"]:hover > ul.dropdown-content {
+	display: block;
+	top: 100%;
+}
+li.dropdown[data-dropdown="top"]:hover > ul.dropdown-content {
+	display: block;
+	bottom: 100%;
+}
+li.dropdown[data-dropdown="right"]:hover > ul.dropdown-content {
+	display: block;
+	left: calc(100% + 20px);
+	top: 0;
+}
+li.dropdown[data-dropdown="left"]:hover > ul.dropdown-content {
+	display: block;
+	right: calc(100% + 20px);
+	top: 0;
+}
+.header-buttons {
+	display: inline-block;
+	float: right;
+}
+xmp {
+	background-color: rgba(255, 255, 200);
+	padding: 0px 40px;
+	overflow: auto;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
