@@ -195,7 +195,6 @@ input[type="text"].right-icon {
 .icon-info {
 	background-image: url('https://www.materialui.co/materialIcons/action/info_outline_grey_192x192.png');
 }
-ul li:not(.logo),
 button,
 button.button-1,
 .button,
@@ -231,7 +230,6 @@ input[type="button"].button-1:hover,
 input[type="reset"].button-1:hover {
 	background-color: rgba(23, 78, 166, 1);
 }
-ul li:not(.logo),
 button.button-2,
 .button.button-2,
 input[type="submit"].button-2,
@@ -241,7 +239,6 @@ input[type="reset"].button-2 {
 	background-color: rgba(241, 243, 244, 1);
 	color: rgba(26, 115, 232, 1);
 }
-li:not(.logo):hover,
 button.button-2:hover,
 .button.button-2:hover,
 input[type="submit"].button-2:hover,
@@ -273,19 +270,30 @@ textarea {
 input[type="file"] {
 	display: none;
 }
-nav ul {
-	list-style-type: none;
-	padding-bottom: 1px;
-}
-li.logo {
-	margin-right: 48px;
-	font-weight: normal;
-	padding-left: 0;
+.nav,
+nav {
 	line-height: 56px;
 }
-nav ul li.logo:hover {
+nav ul,
+.nav .ul,
+nav .ul,
+.nav ul {
+	list-style-type: none;
+	padding-bottom: 1px;
+	display: inline-block;
+}
+nav .logo,
+.nav .logo {
+	font-weight: normal;
+	padding-left: 0;
+	display: inline-block;
+	margin-right: 48px;
+}
+.nav .logo:hover,
+nav .logo:hover {
 	color: rgba(95, 99, 104, 1);
 }
+.nav ul li,
 nav ul li {
 	background-color: rgba(255, 255, 255, 1);
 	display: inline-block;
@@ -293,8 +301,13 @@ nav ul li {
 	padding: 0 20px;
 	color: rgba(95, 99, 104, 1);
 }
-nav ul li:hover {
+nav ul li:hover,
+.nav ul li:hover {
 	background-color: rgba(241, 243, 244, 1);
+	color: rgba(26, 115, 232, 1);
+}
+nav ul li:hover > a,
+.nav ul li:hover > a {
 	color: rgba(26, 115, 232, 1);
 }
 li.dropdown:not([data-dropdown]),
@@ -362,6 +375,12 @@ li.dropdown[data-dropdown="left"]:hover > ul.dropdown-content {
 	right: calc(100% + 20px);
 	top: 0;
 }
+footer nav,
+.footer .nav,
+footer .nav,
+.footer nav {
+	line-height: initial;
+}
 .footer-buttons,
 .header-buttons {
 	display: inline-block;
@@ -388,7 +407,9 @@ a:hover {
 	display: inline-block;
 	vertical-align: top;
 }
-.footer-links,
+.footer-links {
+	padding: 10px 0;
+}
 .footer-buttons {
 	padding: 20px 0;
 }
@@ -405,6 +426,8 @@ a:hover {
 }
 .footer-links a {
 	margin: 0 5px;
+	line-height: 56px;
+	white-space: nowrap;
 }
 .footer-links .logo {
 	margin-right: 50px;
@@ -418,4 +441,57 @@ a:hover {
 }
 .footer-element a:active {
 	background-color: rgba(232, 234, 237, 1);
+}
+@media screen and (min-width: 641px) {
+	.sticky-only-mobile {
+		position: relative;
+	}
+}
+@media screen and (max-width: 640px) {
+	.nav > ul,
+	nav > ul {
+		font-size: 20px;
+		float: right;
+		text-align: center;
+	}
+	.nav > ul:before,
+	nav > ul:before {
+		content: "☰";
+	}
+	.nav > ul > li,
+	nav > ul > li {
+		display: none;
+	}
+	.nav:hover > ul,
+	nav:hover > ul {
+		font-size: initial;
+		float: initial;
+		width: -webkit-fill-available;
+	}
+	.nav:hover > ul:before,
+	nav:hover > ul:before {
+		content: "";
+	}
+	.nav:hover > ul > li,
+	nav:hover > ul > li {
+		display: block;
+	}
+	ul.dropdown-content {
+		width: calc(100% - 40px);
+		padding: 0 20px;
+		left: 0;
+		background-color: rgba(232, 234, 237, 1);
+	}
+	ul.dropdown-content li {
+		line-height: 100%;
+		width: 100%;
+		padding: 20px 20px;
+	}
+	nav .logo,
+	.nav .logo {
+		margin-right: 0;
+	}
+	.sticky-only-pc {
+		position: relative;
+	}
 }
