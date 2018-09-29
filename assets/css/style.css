@@ -22,6 +22,18 @@
 				BORDAS: 2px;
 				PADDING: 3px 14px;
 */
+.demo-item {
+	margin: 20px 5px;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	transition: border-color 0.15s;
+	width: calc(100% - 12px);;
+}
+.demo-item:hover {
+	border-color: rgba(179, 206, 251, 0.5);
+}
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
 	padding: 0;
@@ -58,10 +70,12 @@ body {
 }
 header,
 .header,
-footer,
-.footer,
 nav,
-.nav {
+.nav,
+main,
+.main,
+footer,
+.footer {
 	width: calc(100% - 40px);
 	height: fit-content;
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1)calc(100% - 1px), rgba(218, 220, 224, 1)1px);
@@ -85,17 +99,9 @@ main,
 	margin-right: auto;
 	max-width: 1024px;
 }
-.demo-item {
-	padding: 20px;
-	border-style: solid;
-	border-radius: 10px;
-	border-width: 1px;
-	border-color: rgba(0, 0, 0, 0);
-	transition: border-color 0.15s;
-	width: calc(100% - 42px);;
-}
-.demo-item:hover {
-	border-color: rgba(179, 206, 251, 0.5);
+main,
+.main {
+	padding: 40px 20px;
 }
 .logo {
 	font-size: 24px;
@@ -380,6 +386,7 @@ footer nav,
 footer .nav,
 .footer nav {
 	line-height: initial;
+    text-align: center;
 }
 .footer-buttons,
 .header-buttons {
@@ -387,7 +394,8 @@ footer .nav,
 	float: right;
 }
 .footer-links {
-	display: inline-block
+	display: inline-block;
+	text-align: center;
 }
 xmp {
 	background-color: rgba(255, 255, 200);
@@ -442,6 +450,10 @@ a:hover {
 .footer-element a:active {
 	background-color: rgba(232, 234, 237, 1);
 }
+.form-item {
+	padding: 20px 0;
+}
+
 @media screen and (min-width: 641px) {
 	.sticky-only-mobile {
 		position: relative;
@@ -493,5 +505,13 @@ a:hover {
 	}
 	.sticky-only-pc {
 		position: relative;
+	}
+	.footer-links .logo {
+		margin-right: 0px;
+	}
+	.footer-buttons,
+	.header-buttons {
+		width: 100%;
+		text-align: center;
 	}
 }
