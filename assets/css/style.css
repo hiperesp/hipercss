@@ -22,18 +22,6 @@
 				BORDAS: 2px;
 				PADDING: 3px 14px;
 */
-.demo-item {
-	margin: 20px 5px;
-	border-style: solid;
-	border-radius: 10px;
-	border-width: 1px;
-	border-color: rgba(0, 0, 0, 0);
-	transition: border-color 0.15s;
-	width: calc(100% - 12px);;
-}
-.demo-item:hover {
-	border-color: rgba(179, 206, 251, 0.5);
-}
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
 	padding: 0;
@@ -393,6 +381,7 @@ footer .nav,
 	display: inline-block;
 	float: right;
 }
+.header-title,
 .footer-links {
 	display: inline-block;
 	text-align: center;
@@ -453,7 +442,6 @@ a:hover {
 .form-item {
 	padding: 20px 0;
 }
-
 @media screen and (min-width: 641px) {
 	.sticky-only-mobile {
 		position: relative;
@@ -506,6 +494,11 @@ a:hover {
 	.sticky-only-pc {
 		position: relative;
 	}
+	.header-title,
+	.footer-links {
+		width: 100%;
+	}
+	.header-title .logo,
 	.footer-links .logo {
 		margin-right: 0px;
 	}
