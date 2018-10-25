@@ -1,0 +1,11 @@
+adicionar mensagens de erro
+ajeitar as licenças e créditos
+criar modals + modal de cookies
+criar tooltip
+criar slideshow responsivo
+ajeitar dropdown para os lados no modo mobile
+ajeitar dropdown colocando right-up, left-up
+classe only-mobile e only-pc
+elementos article, etc...
+ícone topo
+hyphens organize
